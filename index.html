@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>game</title>
+    <style>
+    *{
+        padding: 00x;
+        margin:0px;
+    }
+        #g{
+            width: 550px;
+            height: 200px;
+            border: 2px solid black;
+        }
+        #c{
+            width: 30px;
+            height: 50px;
+            background: blue;
+            position: relative;
+            top:150px;
+        }
+        .an{
+            animation:d 500ms;
+        }
+        @keyframes d{
+            0%{top:150px;}
+            30%{top: 95px;}
+            70%{top:105px;}
+            100%{top:150px;}
+        }
+        #b{
+            width:30px;
+            height:30px;
+            background-color: green;
+            position:relative;
+            top:120px;
+            left:520px ;
+            position: relative;
+            animation:b 0.6s 10000 linear;
+        }
+        @keyframes b{
+            0%{left:520px;}
+            100%{left:-30px;}
+        }
+        #j{
+        font-size: 40px;
+            text-align: right;
+            margin:auto;
+            width: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+     <button id="j" onclick="jum()">Jump</button>
+<input type="button" value="button" onclick="jum()">
+    <div id="g">
+        <div id="c">
+
+    </div>
+        <div id="b" >
+
+
+        </div>
+    </div>
+    
+    
+<script>
+    var c=document.getElememtById("c");
+    var b=document.getElememtById("b");
+
+function jum(){
+    if(c.classList!="an"){
+    
+c.classList.add("an");
+}
+setTimeInterval(function(){
+    c.classList.remove("an");
+},200ms);
+}
+</script>
+
+</body>
+</html>
