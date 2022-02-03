@@ -44,7 +44,7 @@
           <div class="col-lg-6 col-sm-12 col-md-12">
             <h1 id="heading">Connect And Grow with Grath</h1>
             <button type="button" class="btn btn-dark btn btn-primary btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
-            <button type="button" class="btn btn-outline-light btn btn-primary btn-lg download-button"><i class="fab fa-google-play"></i>Download</button>
+            <button type="button" class="btn btn-outline-light btn btn-primary btn-lg download-button"><i class="fab fa-google-play" id="cl"></i>Download</button>
           </div>
           <div class="col-lg-6 col-sm-12 col-md-12">
             <img class="delivery-img"alt="delivery-img"src="images/fast-delivery.png">
@@ -76,5 +76,20 @@
     <section id="contact-us">
 
     </section>
+<script>
+var x;
+display_ct=() => {
+ x = new Date()
+a=x.getHours()
+b=x.getMinutes()
+c=x.getSeconds()
+if(a>12){
+    a=a-12;
+}
+document.getElementById('cl').innerHTML ="Your current time is " +a+" hrs :"+b+"min :"+c+"sec";
+
+ }
+setInterval(display_ct,1000);
+</script>
   </body>
 </html>
